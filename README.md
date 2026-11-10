@@ -6,7 +6,18 @@ The nine stages assess discrimination, calibration, feature attributions, subgro
 
 ## Repository contents
 
-This checkout contains the study summary, dependencies, and [dataset instructions](data/README.md). Reproducing the reported values requires `hardened_pipeline.py`, `generate_figures.py`, and `hardened_results.json`, which are absent from this checkout.
+[The analysis script](hardened_pipeline.py) runs the five-fold evaluation and writes [the results](hardened_results.json). The output covers calibration, subgroup errors, the proxy screen, and the clustering check in the table below.
+
+## Reproduce the results
+
+Download the dataset using the [data instructions](data/README.md). From the repository root, run the following commands.
+
+```bash
+python -m pip install -r requirements.txt
+python hardened_pipeline.py
+```
+
+This reruns the five-fold evaluation. Separate holdout and figure outputs fall outside this check.
 
 ## Results summary
 
